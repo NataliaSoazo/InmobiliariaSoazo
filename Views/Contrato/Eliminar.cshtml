@@ -1,0 +1,53 @@
+﻿@model InmobiliariaSoazo.Models.Contrato
+
+@{
+    ViewData["Title"] = "Eliminar";
+}
+
+
+<h3>Estas seguro de eliminar este contrato?</h3>
+<div>
+    <h4>Contrato</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FechaInicio)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FechaInicio)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FechaTerm)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FechaTerm)
+        </dd>
+      
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Locatario)
+        </dt>
+
+        <dd class="col-sm-10">
+            @(Model.Locatario.Nombre + " " + Model.Locatario.Apellido)
+        </dd>
+       
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos)
+        </dt>
+
+        <dd class="col-sm-10">
+            @(Model.Datos.Direccion )
+        </dd>
+    </dl>
+    
+    <form asp-action="Eliminar">
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="Index">Volver al listado anterior</a>
+    </form>
+</div>

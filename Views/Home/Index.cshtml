@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 ">
+
+
+
+        <div class="container">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">InmobiliariaSoazo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-xl-end">
+            <div class="btn btn-warning"> <a class="py-2 d-none d-md-inline-block" asp-controller="Propietario" asp-action="Index"><span class="lnr lnr-user"></span> Propietarios</a></div>
+            <div class="btn btn-warning"><a class="py-2 d-none d-md-inline-block" asp-controller="Inquilino" asp-action="Index"><span class="lnr lnr-apartment"></span> Inquilinos</a> </div>
+            <div class="btn btn-warning"><a class="py-2 d-none d-md-inline-block" asp-controller="Inmueble" asp-action="Index"><span class="lnr lnr-enter"></span> Inmuebles</a></div>
+            <div class="btn btn-warning"><a class="py-2 d-none d-md-inline-block" asp-controller="Contrato" asp-action="Index"><span class="lnr lnr-enter"></span> Contratos</a></div>
+            <div class="btn btn-warning"><a class="py-2 d-none d-md-inline-block" asp-controller="Pagos" asp-action="Index"><span class="lnr lnr-enter"></span> Pagos</a></div>
+            <div class="btn btn-warning"><a class="py-2 d-none d-md-inline-block" asp-controller="Usuario" asp-action="Login"><span class="lnr lnr-enter"></span> Ingrese con su usuario</a></div>
+
+        </div>
+
+
+    </nav>
+
+    <div class="row justify-content-center">
+        .<img src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/WYZOBLVMV5FH7OPR7FL36Q7BXU.jpg" alt="Alternate Text" width="80%" height="80%" />
+
+    </div>
+
+</body>

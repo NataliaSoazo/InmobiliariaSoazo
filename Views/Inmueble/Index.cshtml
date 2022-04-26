@@ -1,0 +1,73 @@
+﻿@model IEnumerable<InmobiliariaSoazo.Models.Inmueble>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<p>
+    <a asp-action="Crear">Agregar un nuevo inmueble</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Direccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ambientes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Uso)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Valor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Disponible)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PropietarioId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>
+					@Html.DisplayFor(modelItem => item.Id)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Direccion)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Ambientes)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Uso)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Valor)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Disponible)
+				</td>
+				<td>
+					@(item.Duenio.Nombre + " " + item.Duenio.Apellido)
+				</td>
+                <td>
+                    @Html.ActionLink("Detalles", "Detalles", new { id = item.Id })
+
+                    @Html.ActionLink("Editar", "Editar", new { id = item.Id })
+
+                    @Html.ActionLink("Eliminar", "Eliminar", new { id = item.Id })
+                </td>
+			</tr>
+			}
+		</tbody>
+</table>
